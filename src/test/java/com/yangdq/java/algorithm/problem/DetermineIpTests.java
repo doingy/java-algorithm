@@ -146,4 +146,10 @@ public class DetermineIpTests {
     void test23() {
         assertFalse(DetermineIp.isIp("200.200.200.200."));
     }
+
+    @Test
+    @DisplayName("1.002.1.1")
+    void test24() {
+        assertFalse(DetermineIp.isIp("1.002.1.1"));
+    }
 }
