@@ -6,6 +6,7 @@ public class DetermineIp {
         boolean result = false;
 
         // 255.255.255.255
+        // 0.0.0.0
         if (str.length() < 7 || str.length() > 15) {
             return false;
         }
