@@ -1,6 +1,9 @@
-package com.yangdq.java.algorithm.base.sort;
+package com.yangdq.java.algorithm.leetcode.medium;
 
-public class QuickSort {
+/**
+ * https://leetcode.com/problems/sort-an-array
+ */
+public class SortAnArray {
     public int[] sortArray(int[] nums) {
         quickSort(nums, 0, nums.length - 1);
         return nums;
