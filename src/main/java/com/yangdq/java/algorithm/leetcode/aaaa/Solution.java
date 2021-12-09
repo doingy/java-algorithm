@@ -3,9 +3,8 @@ package com.yangdq.java.algorithm.leetcode.aaaa;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Stack;
+import java.lang.reflect.Array;
+import java.util.*;
 
 /**
  * 练习
@@ -13,37 +12,27 @@ import java.util.Stack;
 public class Solution {
     private static Logger logger = LoggerFactory.getLogger(Solution.class);
 
-    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
-        ListNode ans = new ListNode();
-        ListNode prev = ans;
+    public int[] test(int[] nums) {
 
-        while (l1 != null && l2 != null) {
+        int j = 0, i = 0;
 
-            if (l1.val < l2.val) {
-                prev.next = l1;
-                l1 = l1.next;
-            } else {
-                prev.next = l2;
-                l2 = l2.next;
-            }
-
+        while (nums[i] != nums[i+1]) {
+            i++;
+        }
+        while (nums[j] == nums[j-1]) {
+            j++;
+        }
+        while (j < nums.length) {
+            
         }
 
-        if (l1 != null) {
-            prev.next = l1;
-        }
-        if (l2 != null) {
-            prev.next = l2;
-        }
-
-        return ans.next;
+        return nums;
     }
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        ListNode l = new ListNode(1, new ListNode(2, new ListNode(4)));
-        ListNode r = new ListNode(1, new ListNode(3, new ListNode(4)));
-        logger.info("" + solution.mergeTwoLists(l, r));
+
+        logger.info("" + Arrays.toString(solution.test(new int[]{1, 2, 3, 3})));
     }
 
     public static class ListNode {
